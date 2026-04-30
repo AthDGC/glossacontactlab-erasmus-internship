@@ -1,0 +1,20 @@
+# Node (used to build the .docx — not needed in published repo)
+node_modules/
+package.json
+package-lock.json
+
+# Build helper scripts (kept locally if you want, but not published)
+build_*.js
+build_*.py
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Local previews / scratch
+_previews*/
+*.tmp
