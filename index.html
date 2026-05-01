@@ -73,49 +73,6 @@ h2.section-title em{font-style:italic;color:var(--accent)}
 .intern-card h4{font-family:var(--serif);font-size:22px;font-weight:600;margin-bottom:10px;color:var(--ink)}
 .intern-card p{font-size:15px;color:var(--ink-soft);line-height:1.6}
 
-/* WELCOME CARD (replaces broken video iframe) */
-.welcome-card{
- position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;
- margin-bottom:24px;box-shadow:var(--shadow);
- background:linear-gradient(135deg,#0f1d2e 0%,#1a2c44 60%,#2d6a6a 110%);
- display:flex;flex-direction:column;justify-content:center;align-items:center;
- color:var(--paper);text-align:center;padding:48px 32px;
-}
-.welcome-card::before,.welcome-card::after{
- content:'';position:absolute;border-radius:50%;filter:blur(40px);opacity:.5;pointer-events:none;
-}
-.welcome-card::before{
- background:var(--accent);width:240px;height:240px;left:-60px;top:-60px;
- animation:drift1 22s ease-in-out infinite alternate;
-}
-.welcome-card::after{
- background:var(--teal);width:300px;height:300px;right:-80px;bottom:-100px;
- animation:drift2 28s ease-in-out infinite alternate;
-}
-@keyframes drift1{from{transform:translate(0,0)}to{transform:translate(60px,40px)}}
-@keyframes drift2{from{transform:translate(0,0)}to{transform:translate(-50px,-30px)}}
-.welcome-greek{
- font-family:var(--serif);font-style:italic;font-size:clamp(32px,5vw,52px);
- letter-spacing:.05em;color:var(--accent-soft);margin-bottom:14px;
- z-index:1;position:relative;
-}
-.welcome-greek span{display:inline-block;animation:fade 6s ease-in-out infinite}
-.welcome-greek span:nth-child(2){animation-delay:1.2s}
-.welcome-greek span:nth-child(3){animation-delay:2.4s}
-.welcome-greek span:nth-child(4){animation-delay:3.6s}
-@keyframes fade{0%,100%{opacity:.35}50%{opacity:1}}
-.welcome-title{
- font-family:var(--serif);font-weight:500;font-size:clamp(28px,4.2vw,46px);
- line-height:1.1;max-width:780px;margin-bottom:18px;z-index:1;position:relative;
-}
-.welcome-sub{
- font-size:14px;letter-spacing:.18em;text-transform:uppercase;
- color:rgba(255,255,255,.65);font-weight:600;
- z-index:1;position:relative;
-}
-
-.video-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:40px}
-.video-actions span{font-size:13px;color:var(--ink-soft);font-style:italic}
 
 .doc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .doc-card{background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:28px;display:flex;gap:20px;align-items:start;text-decoration:none;color:inherit;transition:all .2s}
@@ -223,7 +180,7 @@ footer p strong{font-family:var(--sans);font-style:normal;font-weight:600;color:
 <!-- ABOUT -->
 <section id="about" class="alt">
  <div class="container">
- <div class="section-num">, 01 / About the Lab</div>
+ <div class="section-num">01 / About the Lab</div>
  <h2 class="section-title">A research home for <em>contact linguistics</em>.</h2>
  <p class="section-lead">GlossaContact Lab investigates how languages influence each other across time and space, combining historical philology, corpus methods, and formal syntax under one roof.</p>
 
@@ -251,7 +208,7 @@ footer p strong{font-family:var(--sans);font-style:normal;font-weight:600;color:
 <!-- INTERNSHIP -->
 <section id="internship">
  <div class="container">
- <div class="section-num">, 02 / The Erasmus+ Internship</div>
+ <div class="section-num">02 / The Erasmus+ Internship</div>
  <h2 class="section-title">What you'll <em>actually do</em> here.</h2>
  <p class="section-lead">An internship at GlossaContact is a real research apprenticeship. You will be assigned to an active project, receive structured training, and contribute work that ends up in the lab's outputs.</p>
 
@@ -289,7 +246,7 @@ footer p strong{font-family:var(--sans);font-style:normal;font-weight:600;color:
 <!-- HOW TO APPLY -->
 <section id="apply" class="alt">
  <div class="container">
- <div class="section-num">, 03 / How to Apply</div>
+ <div class="section-num">03 / How to Apply</div>
  <h2 class="section-title">Apply through <em>ErasmusIntern.</em></h2>
  <p class="section-lead">All applications go through the official ErasmusIntern platform, the European Commission's traineeship portal. The button below opens our live listing.</p>
 
@@ -333,47 +290,46 @@ footer p strong{font-family:var(--sans);font-style:normal;font-weight:600;color:
 
 <!-- DOCUMENTS -->
 <section id="documents">
- <div class="container">
- <div class="section-num">, 04 / Welcome &amp; Documents</div>
- <h2 class="section-title">Everything you need <em>in one place.</em></h2>
- <p class="section-lead">A short welcome from the Lab, plus the documents you'll need before you submit your ErasmusIntern application.</p>
+  <div class="container">
+    <div class="section-num">04 / Documents</div>
+    <h2 class="section-title">Everything you need <em>in one place.</em></h2>
+    <p class="section-lead">The documents you'll need before you submit your ErasmusIntern application.</p>
 
- <div class="welcome-card">
- <div class="welcome-greek"><span>γλώσσα</span> · <span>γλώσσα</span> · <span>γλώσσα</span> · <span>γλώσσα</span></div>
- <div class="welcome-title">Welcome to GlossaContact Lab</div>
- <div class="welcome-sub">Athens · NKUA · Erasmus+ research traineeships</div>
- </div>
- <div class="video-actions">
- <a class="btn btn-erasmus" href="https://erasmusintern.org/traineeship/research-traineeship-glossacontact-lab-diachronic-corpus-annotation-academic-publishing" target="_blank" rel="noopener">Apply on ErasmusIntern</a>
- </div>
-
- <div class="doc-grid">
- <a href="documents/GlossaContact_Info_Brochure.pdf" class="doc-card" download>
- <div class="doc-icon pdf"><span>PDF</span></div>
- <div class="doc-info">
- <h4>Information Brochure / Call</h4>
- <p>Two-page overview of the Lab, the internship, who can apply, and the application process.</p>
- <div class="doc-meta">PDF · <span>Read first</span></div>
- </div>
- </a>
- <a href="documents/GlossaContact_Application_Form.docx" class="doc-card" download>
- <div class="doc-icon docx"><span>DOCX</span></div>
- <div class="doc-info">
- <h4>Application Form</h4>
- <p>Editable form: applicant details, home university, motivation, language skills, signature.</p>
- <div class="doc-meta">DOCX · <span>Editable</span></div>
- </div>
- </a>
- <a href="documents/GlossaContact_FAQ.pdf" class="doc-card" download>
- <div class="doc-icon pdf"><span>PDF</span></div>
- <div class="doc-info">
- <h4>Frequently Asked Questions</h4>
- <p>Eligibility, language of work, deliverables, certificates, and the practicalities of joining the Lab.</p>
- <div class="doc-meta">PDF · <span>Quick read</span></div>
- </div>
- </a>
- </div>
- </div>
+    <div class="doc-grid">
+      <a href="documents/GlossaContact_Info_Brochure.pdf" class="doc-card" download>
+        <div class="doc-icon pdf"><span>PDF</span></div>
+        <div class="doc-info">
+          <h4>Information Brochure / Call</h4>
+          <p>Two-page overview of the Lab, the internship, who can apply, and the application process.</p>
+          <div class="doc-meta">PDF · <span>Read first</span></div>
+        </div>
+      </a>
+      <a href="documents/GlossaContact_Application_Form.docx" class="doc-card" download>
+        <div class="doc-icon docx"><span>DOCX</span></div>
+        <div class="doc-info">
+          <h4>Application Form</h4>
+          <p>Editable form: applicant details, home university, motivation, language skills, signature.</p>
+          <div class="doc-meta">DOCX · <span>Editable</span></div>
+        </div>
+      </a>
+      <a href="documents/GlossaContact_FAQ.pdf" class="doc-card" download>
+        <div class="doc-icon pdf"><span>PDF</span></div>
+        <div class="doc-info">
+          <h4>Frequently Asked Questions</h4>
+          <p>Eligibility, language of work, deliverables, certificates, and the practicalities of joining the Lab.</p>
+          <div class="doc-meta">PDF · <span>Quick read</span></div>
+        </div>
+      </a>
+      <a href="documents/GlossaContact_Video_Script.pdf" class="doc-card" download>
+        <div class="doc-icon pdf"><span>PDF</span></div>
+        <div class="doc-info">
+          <h4>Video Script &amp; Storyboard</h4>
+          <p>The script behind a 90-second welcome video, useful if you would like to produce a polished version.</p>
+          <div class="doc-meta">PDF · <span>Production</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
