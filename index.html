@@ -23,9 +23,9 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-heigh
 
 .topbar{position:sticky;top:0;z-index:50;background:rgba(251,250,246,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
 .topbar-inner{max-width:1200px;margin:0 auto;padding:14px 32px;display:flex;justify-content:space-between;align-items:center}
-.brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:22px;font-weight:600;color:var(--ink);text-decoration:none}
+.brand{display:flex;align-items:center;gap:14px;font-family:var(--serif);font-size:22px;font-weight:600;color:var(--ink);text-decoration:none;line-height:1}
 
-.brand-logo{width:42px;height:42px;border-radius:50%;object-fit:cover;display:block}
+.brand-logo{height:44px;width:auto;max-width:160px;display:block;object-fit:contain;flex-shrink:0}
 .nav{display:flex;gap:28px}
 .nav a{color:var(--ink-soft);text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.02em;transition:color .2s}
 .nav a:hover{color:var(--accent)}
@@ -198,7 +198,7 @@ footer p strong{font-family:var(--sans);font-style:normal;font-weight:600;color:
  <div class="research-card">
  <h3>Research Areas</h3>
  <ul class="research-list">
- <li><span>i.</span>Diachronic syntax of Greek &amp; English</li>
+ <li><span>i.</span>Diachronic syntax of Indo-European</li>
  <li><span>ii.</span>Language contact &amp; translation philology</li>
  <li><span>iii.</span>Treebanking &amp; corpus annotation</li>
  <li><span>iv.</span>Bilingualism &amp; heritage languages</li>
