@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AthDGC Laboratory, Erasmus+ Internships</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<p>This site has moved to <a id="l" href="https://athdgc.github.io/athdgclab-erasmus-internship/">athdgc.github.io/athdgclab-erasmus-internship</a>, the Erasmus+ internships site of the AthDGC Laboratory for Diachronic Linguistics and Language Change.</p>
+<script>
+(function () {
+  var base = "/glossacontactlab-erasmus-internship/";
+  var p = location.pathname;
+  var rest = p.indexOf(base) === 0 ? p.slice(base.length) : "";
+  var map = {
+    "documents/GlossaContact_Info_Brochure.pdf": "documents/AthDGC_Info_Brochure.pdf",
+    "documents/GlossaContact_FAQ.pdf": "documents/AthDGC_FAQ.pdf",
+    "documents/GlossaContact_Application_Form.docx": "documents/AthDGC_Application_Form.docx"
+  };
+  if (map[rest]) { rest = map[rest]; }
+  var target = "https://athdgc.github.io/athdgclab-erasmus-internship/" + rest;
+  document.getElementById("l").href = target;
+  window.location.replace(target);
+})();
+</script>
+</body>
+</html>
